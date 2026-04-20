@@ -20,13 +20,11 @@ public class BChigan {
         // 20% шанс попасть в черный список
         boolean isBlacklisted = random.nextDouble() < 0.2;
 
-        // Логика
         boolean isAdult = age >= 18;
         boolean hasAccessByMoney = balance > 50000;
         boolean hasAccess = hasInvitation || hasAccessByMoney;
         boolean isAllowed = isAdult && hasAccess && !isBlacklisted;
-
-        // Красивый вывод
+        
         System.out.println("\n--- ДАННЫЕ ПОСЕТИТЕЛЯ ---");
         System.out.println("Возраст: " + age);
         System.out.printf("Баланс: %.2f\n", balance);
